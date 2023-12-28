@@ -5,6 +5,8 @@ import './App.css';
 import Experience from './Experience';
 import Projects from './Projects'
 import Skills from './Skills';
+import Footer from './Footer';
+import Navbar from './Navbar';
 function App() {
   const [navOpen, SetNavOpen] = useState(false)
 
@@ -35,12 +37,14 @@ function App() {
   }
   return (
     <div id="/">
+    <Navbar navOpen={navOpen} toggle={toggleNav} />
     <motion.div className="cursor" variants={cursor} animate="default">
     </motion.div>
     <About />
     <Experience />
     <Projects />
     <Skills />
+    <Footer/>
     </div>
   );
 }

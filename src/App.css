@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Questrial', sans-serif;
+  font-family: "Questrial", sans-serif;
 }
 
 :root {
@@ -11,7 +11,7 @@
 }
 
 body {
-  background-image: url('./assets/gradient.svg');
+  background-image: url("./assets/gradient.svg");
   background-size: cover;
   background-attachment: fixed;
   color: var(--ink);
@@ -36,6 +36,177 @@ a {
   color: var(--ink);
 }
 
+
+
+.Nav {
+  height: 40px;
+  padding: 0.5rem 2rem;
+  display: flex;
+  z-index: 10;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  /* background-image: url('./assets/gradient.svg');
+  background-size: cover;
+  background-attachment: fixed; */
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  background-clip: padding-box;
+  box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.1);
+}
+
+.Nav .logo {
+  height: 30px;
+}
+
+.Nav .brand {
+  display: flex;
+  align-items: center;
+}
+
+.NavMenu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.NavLink {
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+.NavLink a {
+  border-bottom: 2px solid transparent;
+  transform: translateY(2px);
+}
+
+.NavMenu .NavLink a:hover {
+  border-bottom: 2px solid var(--ink);
+}
+
+.NavMenu .NavLink a.active {
+  border-bottom: 2px solid var(--ink);
+}
+
+.NavBtn {
+  background-color: var(--ink);
+  color: var(--bg);
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.NavBtn a {
+  color: var(--bg);
+  text-decoration: none;
+}
+
+.NavBtn:hover a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.NavBtn:hover {
+  background-color: var(--bg);
+  color: var(--ink);
+}
+
+.Hamburger {
+  display: none;
+  height: 30px;
+  cursor: pointer;
+}
+
+.Sidebar {
+  display: none;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease-in-out;
+  align-items: center;
+  justify-content: center;
+}
+
+.SideMenu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.SideMenu a {
+  color: #acacac;
+}
+
+.SideLink {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.SideBtn {
+  background-color: var(--bg);
+  color: var(--ink);
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.SideBtn a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.SideBtn:hover a {
+  color: var(--bg);
+  text-decoration: none;
+}
+
+.SideBtn:hover {
+  background-color: var(--ink);
+  color: var(--bg);
+}
+
+.close {
+  position: absolute;
+  top: 23px;
+  right: 32px;
+  height: 30px;
+  cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+  .NavMenu {
+      display: none;
+  }
+
+  .cursor {
+      display: none;
+  }
+
+  .Hamburger {
+      display: block;
+  }
+
+  .Sidebar {
+      display: flex;
+  }
+}
+
+
+
 .about {
   min-height: 90vh;
   display: flex;
@@ -52,7 +223,6 @@ a {
   justify-content: center;
   width: 45vw;
 }
-
 
 .about .content p {
   font-size: 25px;
@@ -109,20 +279,19 @@ a {
   margin: 0 50px;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .about .content {
-      width: 80vw;
+    width: 80vw;
   }
 
   .marquee {
-      font-size: 30px;
+    font-size: 30px;
   }
 
   .marquee h1 {
-      margin: 0 20px;
+    margin: 0 20px;
   }
 }
-
 
 .experience {
   display: flex;
@@ -143,7 +312,6 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
 
 .Timeitem_line {
@@ -196,7 +364,6 @@ a {
 
 .Timeitem_title {
   font-size: 20px;
-
 }
 
 .Timeitem_date {
@@ -210,24 +377,23 @@ a {
   padding: 5px 0;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .Timeline {
-      padding: 10px 0;
+    padding: 10px 0;
   }
   .Timeitem_item {
-      margin: 20px 0;
-      margin-left: 10px;
-      padding: 20px;
-      width: 65vw;
+    margin: 20px 0;
+    margin-left: 10px;
+    padding: 20px;
+    width: 65vw;
   }
   .Timeitem_title {
-      font-size: 16px;
+    font-size: 16px;
   }
   .Timeitem_desc {
-      font-size: 14px;
+    font-size: 14px;
   }
 }
-
 
 .projects {
   display: flex;
@@ -294,12 +460,11 @@ a {
   color: var(--highlight);
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .ProjectCard {
-      width: 80vw;
+    width: 80vw;
   }
 }
-
 
 .skills {
   display: flex;
@@ -337,12 +502,45 @@ a {
   height: 45px;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .skills .skill-icons {
-      width: 80vw;
+    width: 80vw;
   }
 
   .skills .skill-icons img {
-      height: 30px;
+    height: 30px;
   }
+}
+
+.footer {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  background-clip: padding-box;
+  box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.footer .icons {
+  display: flex;
+  width: 20vw;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.footer .icons img {
+  height: 30px;
+}
+
+.footer .icons a {
+  transition: all 0.2s ease-in-out;
+}
+
+.footer .icons a:hover {
+  transition: all 0.2s ease-in-out;
+  transform: translateY(-5px);
 }

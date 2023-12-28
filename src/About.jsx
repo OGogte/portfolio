@@ -70,8 +70,8 @@ function About() {
             </div>
             <Marquee gradient={false} speed={100} className="marquee">
                 <h1>Developer</h1>
+                <h1>Chess</h1>
                 <h1>Competitive Programmer</h1>
-                <h1>Chess Enthusiast</h1>
                 <h1>Startups</h1>
             </Marquee>
         </div>
