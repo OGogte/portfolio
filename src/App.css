@@ -122,3 +122,110 @@ a {
       margin: 0 20px;
   }
 }
+
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 90vh;
+  padding-top: 60px;
+}
+
+.Timeline {
+  padding: 50px 0;
+}
+
+.Timeitem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.Timeitem_line {
+  border-right: 2px solid var(--ink);
+  left: 9px;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+}
+
+.Timeitem_items {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Timeitem_item {
+  margin: 20px 0;
+  margin-left: 50px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  background-clip: padding-box;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.1);
+  width: 45vw;
+}
+
+.Timeitem_item li {
+  margin-left: 15px;
+}
+
+.Timeitem_top {
+  /* Center the content horizontally */
+  align-items: center;
+  display: flex;
+}
+
+.Timeitem_circle {
+  /* Rounded border */
+  background-color: var(--ink);
+  border-radius: 100%;
+  /* Size */
+  height: 20px;
+  width: 20px;
+}
+
+.Timeitem_title {
+  font-size: 20px;
+
+}
+
+.Timeitem_date {
+  font-size: 13px;
+  color: var(--highlight);
+  padding: 5px 0;
+}
+
+.Timeitem_desc {
+  font-size: 18px;
+  padding: 5px 0;
+}
+
+@media screen and (max-width:768px) {
+  .Timeline {
+      padding: 10px 0;
+  }
+  .Timeitem_item {
+      margin: 20px 0;
+      margin-left: 10px;
+      padding: 20px;
+      width: 65vw;
+  }
+  .Timeitem_title {
+      font-size: 16px;
+  }
+  .Timeitem_desc {
+      font-size: 14px;
+  }
+}
+
+
