@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Questrial', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --ink: rgb(61, 61, 61);
+  --bg: white;
+  --highlight: cadetblue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-image: url('./assets/gradient.svg');
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--ink);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cursor {
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+a {
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.about {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about .content {
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 45vw;
 }
 
-.App-link {
-  color: #61dafb;
+
+.about .content p {
+  font-size: 25px;
+  padding: 10px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.about .content h1 {
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.about .content span {
+  color: var(--highlight);
+}
+
+.about .content .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.about .content .icons hr {
+  width: 100px;
+  height: 2px;
+  background-color: var(--ink);
+}
+
+.about .content .icons img {
+  height: 30px;
+}
+
+.about .content .icons a {
+  transition: all 0.2s ease-in-out;
+}
+
+.about .content .icons a:hover {
+  transition: all 0.2s ease-in-out;
+  transform: translateY(-5px);
+}
+
+.about .avatar {
+  height: 300px;
+  border-radius: 50%;
+  margin: 30px 0;
+}
+
+.marquee {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.marquee h1 {
+  margin: 0 50px;
+}
+
+@media screen and (max-width:768px) {
+  .about .content {
+      width: 80vw;
   }
-  to {
-    transform: rotate(360deg);
+
+  .marquee {
+      font-size: 30px;
+  }
+
+  .marquee h1 {
+      margin: 0 20px;
   }
 }
