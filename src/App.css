@@ -119,13 +119,14 @@ a {
   display: none;
   height: 30px;
   cursor: pointer;
+  background-color: #ffffff;
 }
 
 .Sidebar {
   display: none;
   z-index: 20;
-  width: 100%;
-  height: 100%;
+  width: 55%;
+  height: 55%;
   background: rgba(0, 0, 0, 0.8);
   color: var(--bg);
   position: fixed;
