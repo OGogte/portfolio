@@ -573,6 +573,7 @@ a {
 
 .footer .icons a {
   transition: all 0.2s ease-in-out;
+  padding-right: 10px;
 }
 
 .footer .icons a:hover {
@@ -581,7 +582,6 @@ a {
 }
 @media screen and (max-width: 768px) {
   .footer .icons a{
-    margin-right: 5px;
-    margin-left: 5px;
+
   }
 }
