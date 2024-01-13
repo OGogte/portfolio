@@ -1,4 +1,4 @@
-export default [
+const TimelineData = [
     {
         title: 'Aakar Foundry (Software Development Engineer Intern)',
         text: <ul>
@@ -23,3 +23,4 @@ export default [
     },
 ];
 
+export default TimelineData;

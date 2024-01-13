@@ -3,7 +3,7 @@ import ticketmaster from './assets/ticketmaster.png'
 import campusolx from './assets/campusolx.png'
 
 
-export default [
+const ProjectData = [
     {
         title: 'BlogIt',
         text: 'A simple platform for individuals to share their thoughts through blogs and showcase images – a space designed for ease of expression.' ,
@@ -26,3 +26,5 @@ export default [
     img: campusolx
     }
 ]
+
+export default ProjectData;
