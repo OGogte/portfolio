@@ -25,20 +25,20 @@ function Skills() {
     const skillsData = [
         {
             category: "Programming Languages", skills: [
-                { label: "C++", icon: <SiCplusplus /> },
                 { label: "JavaScript", icon: <SiJavascript /> },
-                { label: "Java", icon: <DiJava /> },
+                { label: "C++", icon: <SiCplusplus /> },
                 { label: "Python", icon: <DiPython /> },
+                { label: "Java", icon: <DiJava /> },
             ]
         },
         {
             category: "Frontend", skills: [
                 { label: "React", icon: <DiReact /> },
-                { label: "Redux", icon: <SiRedux /> },
+                { label: "MaterialUI", icon: <SiMui /> },
                 { label: "HTML", icon: <DiHtml5 /> },
                 { label: "CSS", icon: <DiCss3 /> },
-                { label: "MaterialUI", icon: <SiMui /> },
                 { label: "TailwindCSS", icon: <SiTailwindcss /> },
+                { label: "Redux", icon: <SiRedux /> },
                 { label: "jQuery", icon: <SiJquery /> },
             ]
         },
@@ -46,17 +46,17 @@ function Skills() {
             category: "Backend", skills: [
                 { label: "Node", icon: <DiNodejs /> },
                 { label: "Express", icon: <SiExpress /> },
-                { label: "MySQL", icon: <DiMysql /> },
                 { label: "MongoDB", icon: <DiMongodb /> },
+                { label: "MySQL", icon: <DiMysql /> },
             ]
         },
         {
             category: "Tools", skills: [
-                { label: "AWS", icon: <DiAws /> },
-                { label: "Docker", icon: <DiDocker /> },
                 { label: "Github", icon: <DiGithubBadge /> },
-                { label: "Firebase", icon: <SiFirebase /> },
                 { label: "Notion", icon: <SiNotion /> },
+                { label: "Firebase", icon: <SiFirebase /> },
+                { label: "Docker", icon: <DiDocker /> },
+                { label: "AWS", icon: <DiAws /> },
             ]
         },
     ];

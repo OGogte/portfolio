@@ -42,7 +42,7 @@ function ProjectCard({ data }) {
                     <CardMedia
                         sx={{ height: 140 }}
                         image={data.img}
-                        title="green iguana"
+                        title={data.title}
                         component='div'
                     />
                     <CardContent>

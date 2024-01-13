@@ -6,7 +6,7 @@
 
 :root {
   --ink: #ffffff;
-  --bg: #1a1a1a;
+  --bg: #000000;
   --highlight: #00ff00;
 }
 
@@ -143,29 +143,29 @@ a {
   height: 100vh;
   width: 100vw;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
+
 }
 
 .SideMenu a {
-  color: #acacac;
+  color: #ffffff;
 }
 
 .SideLink {
   display: flex;
   align-items: center;
   cursor: pointer;
+  padding-top: 50px;
 }
 
 .SideBtn {
-  background-color: var(--bg);
-  color: var(--ink);
-  padding: 5px 10px;
+  padding: 50px 0px 0px 0px;
   border-radius: 20px;
   cursor: pointer;
 }
 
 .SideBtn a {
-  color: var(--ink);
+  color: #00ff00;
   text-decoration: none;
 }
 
@@ -578,4 +578,10 @@ a {
 .footer .icons a:hover {
   transition: all 0.2s ease-in-out;
   transform: translateY(-5px);
+}
+@media screen and (max-width: 768px) {
+  .footer .icons a{
+    margin-right: 5px;
+    margin-left: 5px;
+  }
 }
