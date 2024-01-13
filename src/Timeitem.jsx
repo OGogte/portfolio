@@ -24,11 +24,11 @@ function Timeitem({ data }) {
 
     return (
         <div className="Timeitem">
-            <div class="Timeitem_line"></div>
-            <motion.ul class="Timeitem_items" variants={scroll}>
-                <div class="Timeitem_circle"></div>
-                <a href={data.url} target="_blank">
-                    <motion.li class="Timeitem_item"
+            <div className="Timeitem_line"></div>
+            <motion.ul className="Timeitem_items" variants={scroll}>
+                <div className="Timeitem_circle"></div>
+                <a href={data.url} target="_blank" rel="noreferrer">
+                    <motion.li className="Timeitem_item"
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
@@ -39,15 +39,15 @@ function Timeitem({ data }) {
                                 duration: 0.5,
                             },
                         }}>
-                        <div class="Timeitem_top">
-                            <div class="Timeitem_title">
+                        <div className="Timeitem_top">
+                            <div className="Timeitem_title">
                                 <h3>{data.title}</h3>
                             </div>
                         </div>
-                        <div class="Timeitem_date">
+                        <div className="Timeitem_date">
                             {data.date}
                         </div>
-                        <div class="Timeitem_desc">
+                        <div className="Timeitem_desc">
                             {data.text}
                         </div>
                     </motion.li>

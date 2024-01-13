@@ -1,39 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import bootstrap from "./assets/bootstrap.svg";
-import cpp from "./assets/cpp.svg";
-import css from "./assets/css.svg";
-import notion from "./assets/notion.svg";
-import flask from "./assets/flask.svg";
-import angular from "./assets/angular.svg";
-import firebase from "./assets/firebase.svg";
-// import digitalOcean from "./assets/digitalOcean.png";
-// import scss from "./assets/scss.png";
-import heroku from "./assets/heroku.svg";
-import html from "./assets/html.svg";
-import java from "./assets/java.svg";
-import javascript from "./assets/javascript.svg";
-import jquery from "./assets/jquery.svg";
-import mongodb from "./assets/mongodb.svg";
-import mysql from "./assets/mysql.svg";
-import node from "./assets/node.svg";
-import python from "./assets/python.svg";
-import reacticon from "./assets/reacticon.svg";
-import wordpress from "./assets/wordpress.svg";
-import django from "./assets/django.svg";
-import redis from "./assets/redis.svg";
-import graphql from "./assets/graphql.svg";
-import github from "./assets/github-mark.svg";
-import aws from "./assets/aws.svg";
-import docker from "./assets/docker.svg";
-import jenkins from "./assets/jenkins.svg";
-import redux from "./assets/redux.svg";
-import nextjs from "./assets/nextjs.svg";
-import tailwindcss from "./assets/tailwindcss.svg";
+import { DiJava, DiReact, DiNodejs, DiHtml5, DiCss3, DiPython, DiMongodb, DiMysql, DiAws, DiDocker, DiGithubBadge } from "react-icons/di";
+import { SiJavascript, SiRedux, SiJquery, SiFirebase, SiNotion, SiExpress, SiCplusplus, SiTailwindcss, SiMui } from "react-icons/si";
 import './App.css';
 
 function Skills() {
-
     const scroll = {
         initial: {
             scale: 1.1,
@@ -51,63 +22,87 @@ function Skills() {
             },
         }
     }
+    const skillsData = [
+        {
+            category: "Programming Languages", skills: [
+                { label: "C++", icon: <SiCplusplus /> },
+                { label: "JavaScript", icon: <SiJavascript /> },
+                { label: "Java", icon: <DiJava /> },
+                { label: "Python", icon: <DiPython /> },
+            ]
+        },
+        {
+            category: "Frontend", skills: [
+                { label: "React", icon: <DiReact /> },
+                { label: "Redux", icon: <SiRedux /> },
+                { label: "HTML", icon: <DiHtml5 /> },
+                { label: "CSS", icon: <DiCss3 /> },
+                { label: "MaterialUI", icon: <SiMui /> },
+                { label: "TailwindCSS", icon: <SiTailwindcss /> },
+                { label: "jQuery", icon: <SiJquery /> },
+            ]
+        },
+        {
+            category: "Backend", skills: [
+                { label: "Node", icon: <DiNodejs /> },
+                { label: "Express", icon: <SiExpress /> },
+                { label: "MySQL", icon: <DiMysql /> },
+                { label: "MongoDB", icon: <DiMongodb /> },
+            ]
+        },
+        {
+            category: "Tools", skills: [
+                { label: "AWS", icon: <DiAws /> },
+                { label: "Docker", icon: <DiDocker /> },
+                { label: "Github", icon: <DiGithubBadge /> },
+                { label: "Firebase", icon: <SiFirebase /> },
+                { label: "Notion", icon: <SiNotion /> },
+            ]
+        },
+    ];
+
+    const flexContainer = {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "space-around",
+        padding: "60px 0",
+        backgroundColor: "#000000",
+        color: "#ffffff",
+        textAlign: 'center',
+    };
+    const flexContainers = {
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-around",
+        // padding: "60px 0",
+        backgroundColor: "#000000",
+        color: "#ffffff",
+        
+    };
+    const iconStyle = {
+        fontSize: "2em",
+        marginRight: "5px",
+    };
+
     return (
-        <motion.div id="skills" className="skills" variant={scroll}>
+        <motion.div id="skills" style={flexContainer} variant={scroll}>
             <h1>🪛Skills</h1>
-            <motion.div className="skill-row" initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                variants={scroll}>
-                <h3>Programming Languages</h3>
-                <div className="skill-icons">
-                    <img title='C++' src={cpp}></img>
-                    <img title='JavaScript' src={javascript}></img>
-                    <img title='Java' src={java}></img>
-                    <img title='Python' src={python}></img>
+
+            {skillsData.map((category, index) => (
+                <div key={index} className="skills">
+                    <h2>{category.category}</h2>
+                    <div style={flexContainers}>
+                        {category.skills.map((skill, skillIndex) => (
+                            <div key={skillIndex} className="skill-icon">
+                                {React.cloneElement(skill.icon, { style: { ...iconStyle, color: '#ffffff' } })}
+                                <p>{skill.label}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </motion.div>
-            <motion.div className="skill-row"
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                variants={scroll}>
-                <h3>Frontend</h3>
-                <div className="skill-icons">
-                    <img title='React' src={reacticon}></img>
-                    <img title='Redux' src={redux}></img>
-                    <img title='HTML' src={html}></img>
-                    <img title='CSS' src={css}></img>
-                    <img title='Bootstrap' src={bootstrap}></img>
-                    <img title='jQuery' src={jquery}></img>
-                </div>
-            </motion.div>
-            <motion.div className="skill-row"
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                variants={scroll}>
-                <h3>Backend</h3>
-                <div className="skill-icons">
-                    <img title="Node" src={node}></img>
-                    <img title="MySQL" src={mysql}></img>
-                    <img title="MongoDB" src={mongodb}></img>
-                </div>
-            </motion.div>
-            <motion.div className="skill-row"
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                variants={scroll}>
-                <h3>Tools</h3>
-                <div className="skill-icons">
-                    <img title='AWS' src={aws}></img>
-                    <img title='Docker' src={docker}></img>
-                    <img title='Github' src={github}></img>
-                    <img title='Firebase' src={firebase}></img>
-                    <img title='Heroku' src={heroku}></img>
-                    <img title='Notion' src={notion}></img>
-                </div>
-            </motion.div>
+            ))}
         </motion.div>
     );
 }

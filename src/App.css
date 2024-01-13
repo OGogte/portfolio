@@ -1,17 +1,18 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Questrial", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 :root {
-  --ink: rgb(61, 61, 61);
-  --bg: white;
-  --highlight: cadetblue;
+  --ink: #ffffff;
+  --bg: #1a1a1a;
+  --highlight: #00ff00;
 }
 
 body {
-  background-image: url("./assets/gradient.svg");
+  background-color: #000000;
+  /* background-image: url("./assets/gradient.svg"); */
   background-size: cover;
   background-attachment: fixed;
   color: var(--ink);
@@ -36,8 +37,6 @@ a {
   color: var(--ink);
 }
 
-
-
 .Nav {
   height: 40px;
   padding: 0.5rem 2rem;
@@ -50,14 +49,14 @@ a {
   /* background-image: url('./assets/gradient.svg');
   background-size: cover;
   background-attachment: fixed; */
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #000000;
   backdrop-filter: blur(10px);
   background-clip: padding-box;
   box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.1);
 }
 
 .Nav .logo {
-  height: 30px;
+  height: 32px;
 }
 
 .Nav .brand {
@@ -187,25 +186,23 @@ a {
   cursor: pointer;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .NavMenu {
-      display: none;
+    display: none;
   }
 
   .cursor {
-      display: none;
+    display: none;
   }
 
   .Hamburger {
-      display: block;
+    display: block;
   }
 
   .Sidebar {
-      display: flex;
+    display: flex;
   }
 }
-
-
 
 .about {
   min-height: 90vh;
@@ -231,7 +228,7 @@ a {
 
 .about .content h1 {
   font-size: 60px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .about .content span {
@@ -243,16 +240,22 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
+
 }
 
 .about .content .icons hr {
   width: 100px;
   height: 2px;
-  background-color: var(--ink);
+  /* background-color: var(--ink); */
+  /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); */
+
 }
 
 .about .content .icons img {
   height: 30px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 100%;
 }
 
 .about .content .icons a {
@@ -273,6 +276,7 @@ a {
 .marquee {
   font-size: 60px;
   margin-bottom: 20px;
+  font-weight: 500;
 }
 
 .marquee h1 {
@@ -335,11 +339,11 @@ a {
   margin: 20px 0;
   margin-left: 50px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: black;
   backdrop-filter: blur(10px);
   background-clip: padding-box;
   border-radius: 10px;
-  box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
   width: 45vw;
 }
 
@@ -402,7 +406,7 @@ a {
   align-items: center;
   justify-content: space-around;
   min-height: 90vh;
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 .Gallery {
@@ -418,7 +422,7 @@ a {
 .ProjectGallery {
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  /* padding: 20px 0; */
   flex-wrap: wrap;
 }
 
@@ -433,12 +437,15 @@ a {
   width: 28vw;
   /* min-height: 300px; */
   margin: 20px 20px;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  background-clip: padding-box;
-  border-radius: 10px;
-  box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.1);
-  padding: 10px;
+  /* background: black; */
+  /* backdrop-filter: blur(10px); */
+  /* background-clip: padding-box; */
+  /* border: 2px solid #2c2c2c; */
+  /* border-radius: 10px; */
+  /* box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.1); */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); */
+  padding: 15px;
 }
 
 .ProjectCard img {
@@ -468,49 +475,66 @@ a {
 
 .skills {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-direction:column;
   align-items: center;
   justify-content: space-around;
-  min-height: 90vh;
-  padding: 100px 0;
+  padding: 30px 0px 30px 0px;
+  background-color: #000000; /* Set the background color */
+  color: #ffffff; /* Set text color */
 }
 
-.skills h3 {
+.skills h1 {
   text-align: center;
+  font-size: 2em; /* Increase header font size */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
 }
 
-.skills .skill-row {
-  margin: 10px 0;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  background-clip: padding-box;
-  border-radius: 10px;
-  box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.1);
-  padding: 10px 10px 0 10px;
+.skills h2{
+  text-align: center;
+  font-size: 1.5em; /* Increase header font size */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+  padding-bottom: 10px;
 }
 
-.skills .skill-icons {
+
+.skill-icons {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
-  width: 60vw;
-  padding: 10px 0;
+  justify-content: center;
+  width: 80vw;
+  padding: 10px;
+  gap: 20px;
 }
 
-.skills .skill-icons img {
-  height: 45px;
+.skill-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 10px; /* Add some margin to each icon container */
+  padding: 15px;
+  border: 0px solid #ffffff; /* Set border color */
+  /* background-color: #808080; Set container background color */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Add a subtle box shadow */
+}
+
+.skill-icon svg {
+  height: 50px;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1); /* Enlarge the icon on hover */
 }
 
 @media screen and (max-width: 768px) {
-  .skills .skill-icons {
-    width: 80vw;
+  .skill-icons {
+    width: 90vw;
   }
 
-  .skills .skill-icons img {
+  .skill-icon img {
     height: 30px;
   }
 }
+
 
 .footer {
   background-color: rgba(255, 255, 255, 0.1);
@@ -534,6 +558,9 @@ a {
 
 .footer .icons img {
   height: 30px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 100%;
 }
 
 .footer .icons a {

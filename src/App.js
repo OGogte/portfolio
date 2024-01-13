@@ -7,6 +7,7 @@ import Projects from './Projects'
 import Skills from './Skills';
 import Footer from './Footer';
 import Navbar from './Navbar';
+import Sidebar from './Sidebar';
 function App() {
   const [navOpen, SetNavOpen] = useState(false)
 
@@ -37,14 +38,15 @@ function App() {
   }
   return (
     <div id="/">
-    <Navbar navOpen={navOpen} toggle={toggleNav} />
-    <motion.div className="cursor" variants={cursor} animate="default">
-    </motion.div>
-    <About />
-    <Experience />
-    <Projects />
-    <Skills />
-    <Footer/>
+      <motion.div className="cursor" variants={cursor} animate="default">
+      </motion.div>
+      <Navbar navOpen={navOpen} toggle={toggleNav} />
+      <Sidebar navOpen={navOpen} toggle={toggleNav} />
+      <About />
+      <Experience />
+      <Projects />
+      <Skills />
+      <Footer />
     </div>
   );
 }

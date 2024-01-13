@@ -2,11 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import './App.css';
 import Hamburger from './assets/hamburger.svg'
-import logo from './assets/logo.svg'
 import { Link } from 'react-scroll'
 import NavLink from "./NavLink";
 import NavBtn from "./NavBtn";
-
+import logo from './assets/logo.svg'
 const fadeDown = {
   initial: {
     y: -40,
@@ -34,8 +33,8 @@ function Navbar(props) {
     >
       <NavLink>
         <Link to="/" spy={true} smooth={true} className="brand">
-         {/*  <img src={logo} className="logo"></img> */}
-          <h1>Om Gogte</h1>
+         <img src={logo} className="logo" alt="O"></img>
+          <h1>m</h1>
         </Link>
       </NavLink>
       <div className="NavMenu">
@@ -53,10 +52,10 @@ function Navbar(props) {
         </NavLink>
 
         <NavBtn>
-          <a href='https://drive.google.com/file/d/1bwIvOq_g69eOs6A7CbwujPjrLMKIwIwR/view?usp=sharing' target='_blank'>Resume</a>
+          <a href='https://drive.google.com/file/d/1bwIvOq_g69eOs6A7CbwujPjrLMKIwIwR/view?usp=sharing' rel="noreferrer" target='_blank'>Resume</a>
         </NavBtn>
       </div>
-      <img src={Hamburger} className="Hamburger" onClick={props.toggle} />
+      <img src={Hamburger} className="Hamburger" alt="Hamburger" onClick={props.toggle} />
     </motion.div>
   );
 }
