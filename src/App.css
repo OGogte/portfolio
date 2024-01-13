@@ -7,7 +7,7 @@
 :root {
   --ink: #ffffff;
   --bg: #000000;
-  --highlight: #00ff00;
+  --highlight: #41FF00;
 }
 
 body {
@@ -165,7 +165,7 @@ a {
 }
 
 .SideBtn a {
-  color: #00ff00;
+  color: #41FF00;
   text-decoration: none;
 }
 
