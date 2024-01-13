@@ -124,9 +124,9 @@ a {
 
 .Sidebar {
   display: none;
-  z-index: 20;
-  width: 55%;
-  height: 55%;
+  z-index: 200;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.8);
   color: var(--bg);
   position: fixed;
@@ -140,8 +140,8 @@ a {
 .SideMenu {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   align-items: center;
   justify-content: space-around;
 }
@@ -202,6 +202,7 @@ a {
 
   .Sidebar {
     display: flex;
+    position: fixed;
   }
 }
 
@@ -241,7 +242,6 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
-
 }
 
 .about .content .icons hr {
@@ -249,7 +249,6 @@ a {
   height: 2px;
   /* background-color: var(--ink); */
   /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); */
-
 }
 
 .about .content .icons img {
@@ -476,7 +475,7 @@ a {
 
 .skills {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
   padding: 30px 0px 30px 0px;
@@ -490,13 +489,12 @@ a {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
 }
 
-.skills h2{
+.skills h2 {
   text-align: center;
   font-size: 1.5em; /* Increase header font size */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
   padding-bottom: 10px;
 }
-
 
 .skill-icons {
   display: flex;
@@ -508,10 +506,12 @@ a {
 }
 
 .skill-icon {
+  height: 80px;
+  width: 80px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  margin: 0 10px; /* Add some margin to each icon container */
+  margin: 10px; /* Add some margin to each icon container */
   padding: 15px;
   border: 0px solid #ffffff; /* Set border color */
   /* background-color: #808080; Set container background color */
@@ -526,16 +526,23 @@ a {
   transform: scale(1.1); /* Enlarge the icon on hover */
 }
 
+.skill-icon p {
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 768px) {
   .skill-icons {
     width: 90vw;
+    flex-direction: row;
+    align-items: center;
   }
-
+  .skill-icon {
+    margin: 10px 0;
+  }
   .skill-icon img {
     height: 30px;
   }
 }
-
 
 .footer {
   background-color: rgba(255, 255, 255, 0.1);

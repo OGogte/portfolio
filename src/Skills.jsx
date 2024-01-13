@@ -71,16 +71,6 @@ function Skills() {
         color: "#ffffff",
         textAlign: 'center',
     };
-    const flexContainers = {
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "space-around",
-        // padding: "60px 0",
-        backgroundColor: "#000000",
-        color: "#ffffff",
-        
-    };
     const iconStyle = {
         fontSize: "2em",
         marginRight: "5px",
@@ -93,7 +83,7 @@ function Skills() {
             {skillsData.map((category, index) => (
                 <div key={index} className="skills">
                     <h2>{category.category}</h2>
-                    <div style={flexContainers}>
+                    <div className="skill-icons">
                         {category.skills.map((skill, skillIndex) => (
                             <div key={skillIndex} className="skill-icon">
                                 {React.cloneElement(skill.icon, { style: { ...iconStyle, color: '#ffffff' } })}
