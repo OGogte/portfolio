@@ -169,15 +169,15 @@ a {
   text-decoration: none;
 }
 
-.SideBtn:hover a {
+/* .SideBtn:hover a {
   color: var(--bg);
   text-decoration: none;
-}
+} */
 
-.SideBtn:hover {
+/* .SideBtn:hover {
   background-color: var(--ink);
   color: var(--bg);
-}
+} */
 
 .close {
   position: absolute;
